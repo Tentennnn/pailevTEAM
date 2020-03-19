@@ -12,7 +12,7 @@ exports.run = async (bot, message, args, tools) => {
 
     arraySort(invites, 'users', { reverse: true });
 
-    let possibleInvites = [['User', 'User']];
+    let possibleInvites = [['Username', 'Invite ']];
     invites.forEach(function(invite) {
         possibleInvites.push([invite.inviter.username, invite.uses]);
     });
