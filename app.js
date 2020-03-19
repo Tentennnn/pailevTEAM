@@ -27,21 +27,21 @@ client.on('ready', () => {
 
 
 function setActivity() {
-    var Gameinfo = [`FB: Hea LOng`, `FB: Hea LOng`,`Legacy Of Discord`,`MOBILE LEGEND`, `Legacy Of Discord`, `MOBILE LEGEND`]
+    //Variable Array for what the setGame can be set to
+    var Gameinfo = [`Run on ${client.guilds.size} Servers`, `${prefix}help`,
+        `Using ${(((process.memoryUsage().heapUsed)/1024)/1024).toFixed(0)}Mb's of RAM`, `Ping to API: ${(client.ping).toFixed(0)} Ms`, `I ❤ CAMBODIA` // Change these to what you want, add as many or as few as you want to
+    ]
+
     var info = Gameinfo[Math.floor(Math.random() * Gameinfo.length)]; //Random Math to set the setGame to something in the GameInfo array
+
     client.user.setActivity(info) // "playing Game" '...' Sets the setGame to what the info Random math picked from the GameInfo Array
     if (config.debugMode === "1") {
         console.log(`[ LOG ] set Activity set to ( ${info} )`) //Logs to console what the setGame was set as.
     }
 
 }
-setInterval(setActivity, 900 * 60 * 2)
 
-client.on("guildCreate", async guild => {
-      const embed = new Discord.RichEmbed()
-      .setDescription(`Thank You ! For Invite **${client.user.tag}** To Server\n\nCommands List :\`\`\`Coming Soon xD \nSorry For No Command Now ! Command Has Add Coming Soon\`\`\` `);
-client.author.send(embed);
-});
+setInterval(setActivity, 1000 * 60 * 2)
 
 
 client.on("guildMemberAdd", async member => {
