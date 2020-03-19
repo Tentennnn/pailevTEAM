@@ -38,6 +38,7 @@
     "querystring": "^0.2.0",
     "cheerio": "^0.22.0",
     "unfluff": "^3.0.1",
+    "quick.db": "^7.0.0-b22",
     "fast-html-parser": "^1.0.1"
   },
   "engines": {
