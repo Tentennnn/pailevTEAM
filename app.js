@@ -118,7 +118,7 @@ client.on("message", async message => {
 };
 
    if(command === "status" ) {
-  message.channel.send("@everyone");
+  message.channel.send("@everyone ► NEW STATUS POST NOW ! REACT BY CLICK EMOJI ");
   message.delete();
  //if(!message.member.roles.some(r=>["STATUS", "status"].includes(r.name)) )
      // return message.reply("You Need Invite 10 People To Get `STATUS` Roles To Use This Commands ! \n\nGo To #bot-command and do `--ranks` to view more role rewards !").then(msg => msg.delete(12000));
@@ -132,9 +132,9 @@ client.on("message", async message => {
     let announceEmbed = new Discord.RichEmbed()
     .setColor(`RANDOM`)
     .setDescription(status)
-    .setFooter(`${message.author.username} STATUS • React By Click Emoji`, message.author.avatarURL)
+    .setFooter(`${message.author.username} STATUS •`, message.author.avatarURL)
     .setTimestamp()
-    .setTitle("STATUS :")
+    .setTitle("STATUS | STORY :")
 
     let m = await message.channel.send(announceEmbed);
     await m.react(`👍`);
