@@ -49,18 +49,7 @@ client.on("guildMemberAdd", async member => {
     var rand = Math.floor(Math.random() * images.length);
     var randomImage = images[rand];
 
-    let memberjoin = member.guild.channels.find('name', "join-logs");
-const embed = new Discord.RichEmbed()
-//.setTitle(`${member}`)
-.setThumbnail(member.user.avatarURL)
-.setImage(randomImage)
-.setColor('RANDOM')
-.setFooter(`MobileLegendsBoomBoom`)
-.setTimestamp()
-    .setDescription(`:party_parrot: WELCOME **${member}** TO **${member.guild.name}** SERVER  , YOU ARE A MEMBER : **${member.guild.memberCount}**`);
-memberjoin.sendEmbed(embed);
-});   
-
+ 
 client.on("guildMemberAdd", async member => {
     let memberjoin = member.guild.channels.find('name', "new-player");
 const embed = new Discord.RichEmbed()
@@ -68,7 +57,7 @@ const embed = new Discord.RichEmbed()
 .setColor('#1f49a1')
 .setFooter('🔵 MEMBER JOIN !')
 .setTimestamp()
-    .setDescription(`**[ ${member} ]** \nWELCOME TO **${member.guild.name}** SERVER  , YOU ARE A MEMBER : **${member.guild.memberCount}**\n  `);
+    .setDescription(`:party_parrot: **[  ${member}   ]** \nWELCOME TO **${member.guild.name}** SERVER  , YOU ARE A MEMBER : **${member.guild.memberCount}**\n  `);
 memberjoin.sendEmbed(embed);
 //.react('🔗');
 });
