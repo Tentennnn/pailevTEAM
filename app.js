@@ -108,7 +108,7 @@ client.on("message", async message => {
           color: 0xffffff,
        //   Author: `${mess`,
           title: `► SUPPORT DEVELOPRER`,
-          description: `Please Help Me Share This Links/Server To Your Friend , Thank You ! <3\n\n► https://discord.gg/ZWWD7zT``,
+          description: `Please Help Me Share This Links/Server To Your Friend , Thank You ! <3\n\n► https://discord.gg/ZWWD7zT`,
         }});
     });
 
