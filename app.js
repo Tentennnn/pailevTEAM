@@ -108,7 +108,7 @@ client.on("message", async message => {
           color: 0xffffff,
        //   Author: `${mess`,
           title: `► SUPPORT BOT`,
-          description: `Please Help Me Share This Links/Server To Your Friend , Thank You ! <3\n\n► https://discord.gg/ZWWD7zT`,
+          description: ` 🏷 **Now We Need You To Help . \nPlease Help Share This [LINK / SERVER] To Your Server, THANK YOU SO MUCH ! ** \n\n►►► https://discord.gg/ZWWD7zT ◄◄◄`,
         }});
     });
 
@@ -130,9 +130,10 @@ client.on("message", async message => {
     message.delete();
     let announceEmbed = new Discord.RichEmbed()
     .setColor(`RANDOM`)
+    .setDescription(status)
     .setFooter(`${message.author.username} STATUS :`, message.author.avatarURL)
     .setTimestamp()
-    .setTitle(status)
+    .setTitle("STATUS :")
 
     let m = await message.channel.send(announceEmbed);
     await m.react(`👍`);
