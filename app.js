@@ -107,7 +107,7 @@ client.on("message", async message => {
         message.guild.member(player).send({embed: {
           color: 0xffffff,
        //   Author: `${mess`,
-          title: `► SUPPORT DEVELOPRER`,
+          title: `► SUPPORT BOT`,
           description: `Please Help Me Share This Links/Server To Your Friend , Thank You ! <3\n\n► https://discord.gg/ZWWD7zT`,
         }});
     });
@@ -116,6 +116,33 @@ client.on("message", async message => {
    
 
 };
+
+   if(command === "status" ) {
+  message.delete();
+ //if(!message.member.roles.some(r=>["STATUS", "status"].includes(r.name)) )
+     // return message.reply("You Need Invite 10 People To Get `STATUS` Roles To Use This Commands ! \n\nGo To #bot-command and do `--ranks` to view more role rewards !").then(msg => msg.delete(12000));
+    if(!args[0]) {
+       const statushelp = new Discord.RichEmbed()
+       .setTitle(`Facebook Status xD : ${config.prefix}status <STATUS>`)
+        return message.channel.send(statushelp).then(msg => msg.delete(8000));
+    }
+    let status = args.join(" ");
+    message.delete();
+    let announceEmbed = new Discord.RichEmbed()
+    .setColor(`RANDOM`)
+    .setFooter(`${message.author.username} STATUS :`, message.author.avatarURL)
+    .setTimestamp()
+    .setTitle(status)
+
+    let m = await message.channel.send(announceEmbed);
+    await m.react(`👍`);
+    await m.react(`❤`);
+    await m.react(`😂`);
+    await m.react(`😮`);
+    await m.react(`😢`);
+    await m.react(`😡`);
+
+}
 
 //  if(command === "embad") {
        // message.delete(1000);
