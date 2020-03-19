@@ -21,7 +21,7 @@ let prefix = "#";
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag} on ${client.guilds.size} Servers ..`);
-   client.channels.get("690183762633424927").send(`🔴\`LIVE\` **<@457770979519627275>** Is Online Now ! <@356510829920780289> `).then(msg => msg.delete(50000));
+   client.channels.get("690183762633424927").send(`🔴\`LIVE\` BOT Is Online Now ! <@356510829920780289> `).then(msg => msg.delete(50000));
    //client.user.setActivity(`${prefix}help | PAILEV`, { type: 'WATCHING' })
   });
 
@@ -57,7 +57,7 @@ const embed = new Discord.RichEmbed()
 .setColor('RANDOM')
 .setFooter(`MobileLegendsBoomBoom`)
 .setTimestamp()
-    .setDescription(`WELCOME **${member}** TO **${member.guild.name}** SERVER  , YOU ARE A MEMBER : **${member.guild.memberCount}**`);
+    .setDescription(`:party_parrot: WELCOME **${member}** TO **${member.guild.name}** SERVER  , YOU ARE A MEMBER : **${member.guild.memberCount}**`);
 memberjoin.sendEmbed(embed);
 });   
 
@@ -68,7 +68,7 @@ const embed = new Discord.RichEmbed()
 .setColor('#1f49a1')
 .setFooter('🔵 MEMBER JOIN !')
 .setTimestamp()
-    .setDescription(`**[ ${member} ]** \nWELCOME TO **${member.guild.name}** SERVER  , YOU ARE A MEMBER : **${member.guild.memberCount}**\n•  `);
+    .setDescription(`**[ ${member} ]** \nWELCOME TO **${member.guild.name}** SERVER  , YOU ARE A MEMBER : **${member.guild.memberCount}**\n  `);
 memberjoin.sendEmbed(embed);
 //.react('🔗');
 });
