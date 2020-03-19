@@ -21,15 +21,15 @@ let prefix = "#";
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag} on ${client.guilds.size} Servers ..`);
-  // client.channels.get("458229418549313546").send(`🔴\`LIVE\` **<@457770979519627275>** Is Online Now ! <@356510829920780289> `).then(msg => msg.delete(50000));
-   //client.user.setActivity(`${prefix}help | MLBB Cambodia`, { type: 'WATCHING' })
+   client.channels.get("690183762633424927").send(`🔴\`LIVE\` **<@457770979519627275>** Is Online Now ! <@356510829920780289> `).then(msg => msg.delete(50000));
+   //client.user.setActivity(`${prefix}help | PAILEV`, { type: 'WATCHING' })
   });
 
 
 function setActivity() {
     //Variable Array for what the setGame can be set to
-    var Gameinfo = [`Run on ${client.guilds.size} Servers`, `${prefix}help`,
-        `Using ${(((process.memoryUsage().heapUsed)/1024)/1024).toFixed(0)}Mb's of RAM`, `Ping to API: ${(client.ping).toFixed(0)} Ms`, `P A I L E V` // Change these to what you want, add as many or as few as you want to
+    var Gameinfo = [`${prefix}help`, `${prefix}help`, //`Run on ${client.guilds.size} Servers
+        `${prefix}help`, `${prefix}help`, `P A I L E V` // Change these to what you want, add as many or as few as you want to
     ]
 
     var info = Gameinfo[Math.floor(Math.random() * Gameinfo.length)]; //Random Math to set the setGame to something in the GameInfo array
@@ -61,16 +61,19 @@ const embed = new Discord.RichEmbed()
 memberjoin.sendEmbed(embed);
 });   
 
-//client.on("guildMemberRemove", async member => {
-    //let memberjoin = member.guild.channels.find('name', "");
-//const embed = new Discord.RichEmbed()
-//.setThumbnail(member.user.avatarURL)
-//.setColor('#FF0000')
-//.setFooter('🔴 MEMBER LEFT !')
-//.setTimestamp()
-  //  .setDescription(`**[ ${member} ]** HAS LEFT **${member.guild.name}** SERVER  , THE SERVER NOW : **${member.guild.memberCount}** USER ! `);
-//memberjoin.send(embed);
-//});    
+client.on("guildMemberAdd", async member => {
+    let memberjoin = member.guild.channels.find('name', "new-player");
+const embed = new Discord.RichEmbed()
+.setThumbnail(member.user.avatarURL)
+.setColor('#1f49a1')
+.setFooter('🔵 MEMBER JOIN !')
+.setTimestamp()
+    .setDescription(`**[ ${member} ]** \nWELCOME TO **${member.guild.name}** SERVER  , YOU ARE A MEMBER : **${member.guild.memberCount}**\n•  `);
+memberjoin.sendEmbed(embed);
+//.react('🔗');
+});
+
+   
 client.on("message", async message => {
   if(message.author.bot) return;
   if(message.content.startsWith(prefix)){
