@@ -15,8 +15,8 @@ const commandName = args.shift().toLowerCase();
        .setColor('RANDOM')
        .setDescription('say')
     message.channel.send(embedsay)
-    message.react("👍");
-    message.react("👎");
+    message.react('👍');
+    message.react('👎');
     
  
  
