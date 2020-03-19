@@ -12,7 +12,7 @@ const commandName = args.shift().toLowerCase();
    // let say = args.join("");
     let embedsay = new Discord.RichEmbed()
        .setColor('RANDOM')
-       .setDescription('THIS BOT WILL HOST SOON....\n\n\n**CONTACT :**\nDEVOLEPOR : Ort Brap Tuk Oy Chngol\nFACEBOOK : [CLICK HERE](https://www.facebook.com/heaalong855)\n\nDISCORD : [CLICK HERE](https://discord.gg/ZWWD7zT)')
+       .setDescription('THIS BOT WILL HOST SOON....\n\n\n**CONTACT :**\n\nDEVOLEPOR : Ort Brap Tuk Oy Chngol 😎 \nFACEBOOK : [CLICK HERE](https://www.facebook.com/heaalong855)\nDISCORD : [CLICK HERE](https://discord.gg/ZWWD7zT)')
        .setTitle(message.guild.name)
        
     message.channel.send(embedsay)
