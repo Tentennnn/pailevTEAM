@@ -16,7 +16,7 @@ const meme = require('memejs');
 const gifSearch = require("gif-search"); 
 const db = require('quick.db');
 
-let prefix = "..";
+let prefix = "#";
 
 
 client.on('ready', () => {
