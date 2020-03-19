@@ -1,25 +1,24 @@
 
 const Discord = require("discord.js");
-const send = require('quick.hook');
 
-exports.run = (client, message, Discord, prefix, args) => {
+exports.run = (client, message, Discord, prefix) => {
 
 const args = message.content.slice(prefix.length).split(/ +/);
 const commandName = args.shift().toLowerCase(); 
-    message.channel.send("@everyone");
-  //  message.delete(900);
-    let poll = args.join(" ");
-
-    let announceEmbed = new Discord.RichEmbed()
-    .setColor(`RANDOM`)
-    .setTimestamp()
-    .setTitle(poll)
-
-    message.channel.send(announceEmbed);
-    message.react(`✅`);
-    message.react(`❌`);
-
+ 
+ //message.delete(100);
+    message.delete(100);
+   // if(message.author.id !== "356510829920780289") return;
+    
+    let say = args.join("");
+    let embedsay = new Discord.RichEmbed()
+       .setColor('RANDOM')
+       .setDescription('say')
+    message.channel.send(embedsay)
+    message.react("👍");
+    message.react("👎");
+    
+ 
+ 
+ 
 }
-module.exports.help = {
-    name: "poll"
-  }
