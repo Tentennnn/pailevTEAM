@@ -4,7 +4,7 @@ const snekfetch = require('snekfetch');
 exports.run = (client, message, Discord, prefix) => {   
 
     let target = message.mentions.users.first() || message.author;
-    let wait = await message.channel.send('Adding Magik Picture ........')
+   // let wait = await message.channel.send('Adding Magik Picture ........')
 
     let userAvatar = (target.displayAvatarURL);
     if (['jpg', 'jpeg', 'gif', 'png', 'webp'].some(x => args.join(' ').includes(x))) {
@@ -13,7 +13,7 @@ exports.run = (client, message, Discord, prefix) => {
 
     let res = await snekfetch.get(`https://discord.services/api/magik?url=${userAvatar}`)
 
-            await wait.delete()
+           // await wait.delete()
 
             const magikEmbed = new Discord.RichEmbed() 
                 .setImage(`https://discord.services/api/magik?url=${userAvatar}`); 
