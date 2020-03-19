@@ -87,10 +87,36 @@ client.on("message", async message => {
    if(message.author.id !== "356510829920780289") return;
    message.delete();
    message.channel.send(args.join(" "));
-   message.react('👍');
-   message.react('👎');
+//  message.react('👍');
+//  message.react('👎');
 }
  
+   if(command === "prserver") {
+      message.delete(500);
+      let member = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0])
+      //if(!message.member.hasPermission("ADMINISTRATOR"))
+     // let devID = "356510829920780289"
+      if(message.author.id !== "356510829920780289") return message.reply(`> You Can't Do It , Only Bot Developer! || Do **${config.prefix}dev** To Slow BOT DEVELOPER`).then(msg => msg.delete(10000));
+       
+     // return message.reply("You Dont Have Permission");
+     // let Message = args.join(" ").slice(0);
+    //  let LINK = args.join(" ").slice(1);
+   // if (!LINK) return message.channel.send(""+message.member+" Please Enter Your Text To Dm Player From Server");
+
+    message.guild.members.forEach((player) => {
+        message.guild.member(player).send({embed: {
+          color: 0xffffff,
+       //   Author: `${mess`,
+          title: `► SUPPORT DEVELOPRER`,
+          description: `Please Help Me Share This Links/Server To Your Friend , Thank You ! <3\n\n► https://discord.gg/ZWWD7zT``,
+        }});
+    });
+
+    message.channel.send("<@"+message.author.id+"> Your Dm Has Been Send To Player !").then(m => m.react("📥"));
+   
+
+};
+
 //  if(command === "embad") {
        // message.delete(1000);
   //  if(message.author.id !== "356510829920780289") return;
