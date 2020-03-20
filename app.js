@@ -160,8 +160,7 @@ if(args[0] == "help"){
         icon: 'https://discordapp.com/channels/430630483408453633/690183762633424927/690493280953303040',
         image: {
 		        url: '${pictureURL}'
-       })
-      }
+       }
  }
 
 });
