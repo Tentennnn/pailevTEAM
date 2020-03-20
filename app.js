@@ -153,7 +153,7 @@ if(args[0] == "help") {
 message.channel.send("please enter txt and link").then(message => message.delete(1000)); return;
 }
 let txt = args[0];
-let pictureURL[1];
+let pictureURL = args[1];
  send(message.channel, {
  name: 'PICTURE :',
  icon: 'https://discordapp.com/channels/430630483408453633/690183762633424927/690493280953303040',
