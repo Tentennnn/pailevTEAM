@@ -162,7 +162,7 @@ let pictureURL = args[1];
    }
   }
 
- }
+ };
 
 
 
