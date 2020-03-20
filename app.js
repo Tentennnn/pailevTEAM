@@ -142,26 +142,8 @@ client.on("message", async message => {
     await m.react(`😂`);
     await m.react(`😮`);
     await m.react(`😢`);
-    //await m.react(`😡`);
 
-}
 
-  if(command === "poll") {
-   if(message.author.id !== "356510829920780289") return;
-  let message = args.join[0];
-//  let pm1 = args.join[1];
-  //let pm2 = args.join[2];
-  //let pm3 = args.join[3];
-
- const Embed = new Discord.Rich()
-  .setColor('RANDOM')
-  .setDescription(`${message}`)
-  .setTitle("Poll :")
-
- message.channel.send(Embed);
- message.react(":one:");
- message.react(":two:");
- message.react(":three:");
 }
 
 
