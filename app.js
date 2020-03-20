@@ -57,7 +57,7 @@ const embed = new Discord.RichEmbed()
 .setColor('#1f49a1')
 .setFooter('🔵 MEMBER JOIN !')
 .setTimestamp()
-    .setDescription(`:party_parrot: **[  ${member}   ]** \nWELCOME TO **${member.guild.name}** SERVER  , YOU ARE A MEMBER : **${member.guild.memberCount}**\n  `);
+    .setDescription(`**[  ${member}   ]** \nWELCOME TO **${member.guild.name}** SERVER  , YOU ARE A MEMBER : **${member.guild.memberCount}**\n  `);
 memberjoin.sendEmbed(embed);
 //.react('🔗');
 });
