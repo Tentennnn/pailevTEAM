@@ -142,20 +142,23 @@ client.on("message", async message => {
     await m.react(`😂`);
     await m.react(`😮`);
     await m.react(`😢`);
-    await m.react(`😡`);
+    //await m.react(`😡`);
 
 }
 
-//  if(command === "embad") {
-       // message.delete(1000);
-  //  if(message.author.id !== "356510829920780289") return;
-//     let args = args.join(" ");
- //    let sembad = new Discrd.RichEmbed()
-  //      .setColor('RANDOM')
-  //      .setDescription('args');
- //       
-   //     message.channel.send(sembad);
-// }
+  if(command === "picture") {
+        message.delete(1000);
+    if(message.author.id !== "356510829920780289") return;
+     let args = args.join(" ");
+     let sembad = new Discrd.RichEmbed()
+        .setColor('RANDOM')
+        .setImage('args')
+        .setTitle('PICTURE RATEING :')
+        
+        message.channel.send(sembad);
+        message.react('👍');
+        message.react('👎');
+ }
 
 });
 
