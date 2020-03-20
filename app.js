@@ -118,7 +118,7 @@ client.on("message", async message => {
 };
 
    if(command === "status" ) {
-  message.channel.send("@everyone ► NEW STATUS POST NOW ! REACT BY CLICK EMOJI ");
+//  message.channel.send("@everyone ► NEW STATUS POST NOW ! REACT BY CLICK EMOJI ");
   message.delete();
  //if(!message.member.roles.some(r=>["STATUS", "status"].includes(r.name)) )
      // return message.reply("You Need Invite 10 People To Get `STATUS` Roles To Use This Commands ! \n\nGo To #bot-command and do `--ranks` to view more role rewards !").then(msg => msg.delete(12000));
@@ -146,7 +146,23 @@ client.on("message", async message => {
 
 }
 
+  if(command === "poll") {
+   if(message.author.id !== "356510829920780289") return;
+  let message = args.join[0];
+//  let pm1 = args.join[1];
+  //let pm2 = args.join[2];
+  //let pm3 = args.join[3];
 
+ const Embed = new Discord.Rich()
+  .setColor('RANDOM')
+  .setDescription(`${message}`)
+  .setTitle("Poll :")
+
+ message.channel.send(Embed);
+ message.react(":one:");
+ message.react(":two:");
+ message.react(":three:");
+}
 
 
 
