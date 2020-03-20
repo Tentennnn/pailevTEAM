@@ -3,7 +3,7 @@ const send = require('quick.hook');
 const snekfetch = require('snekfetch');
 
 
-exports.run = (clinet, message, Discord, prefix) => {
+exports.run = (clinet, message, Discord, args, prefix) => {
 message.delete()
 if(args[0] == "help"){
   message.channel.send("**Enter • <YTUsername> <VideoURL>**").then(msg => msg.delete(11000));
