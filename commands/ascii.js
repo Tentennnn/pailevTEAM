@@ -1,6 +1,29 @@
 const Discord = require('discord.js'),
-    arraySort = require('array-sort'),
-    table = require('table');
+      cheerio = require('cheerio'),
+      Chance = require('chance'),
+      random = new Chance(),
+      parseArgs = require('minimist'),  
+      arraySort = require('array-sort'), 
+      table = require('table'), 
+      querystring = require('querystring'),
+      send = require('quick.hook');
+const config = require("./config");
+const fs = require("fs");
+const client = new Discord.Client();
+const ms = require("ms");
+const encode = require('strict-uri-encode');
+const snekfetch = require('snekfetch');
+const superagent = require("superagent");
+const meme = require('memejs');
+const yoMamma = require('yo-mamma').default;
+const snek = require('snekfetch');
+const twemoji = require('twemoji');
+const ownerID = ["356510829920780289", "424916247696900135"];
+const gifSearch = require("gif-search");
+const figlet = require('figlet');
+const moment = require('moment');
+               require("moment-duration-format");
+const { get } = require('request-promise-native');
 
       
 
