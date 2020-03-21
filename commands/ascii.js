@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const figlet = require("figlet")
 
-module.exports.run = async (bot, message, args) => {
+exports.run = async (bot, message, args, tools) => {
      
 
   message.react("✅");
