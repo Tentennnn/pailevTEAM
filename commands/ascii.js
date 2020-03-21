@@ -29,8 +29,8 @@ const { get } = require('request-promise-native');
 
 exports.run = async (bot, message, args, tools) => {
    
-       const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
-       const command = args.shift().toLowerCase(); 
+   //    const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
+       //const command = args.shift().toLowerCase(); 
        var args = message.content.split(' ').slice(1);
 
   if(args.join(' ').length > 14) return message.channel.send('Only 14 characters are admitted!') 
