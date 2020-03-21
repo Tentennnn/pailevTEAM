@@ -6,7 +6,7 @@ exports.run = (client, message, Discord, prefix) => {
 const args = message.content.slice(prefix.length).split(/ +/);
 const commandName = args.shift().toLowerCase(); 
  
- message.delete(9000);
+ message.delete(13000);
     //if(message.author.id !== "356510829920780289") return;
     
    // let say = args.join("");
@@ -20,12 +20,10 @@ const commandName = args.shift().toLowerCase();
     .addField("General", "`ping`  `avatar`  `emojilist`   `invite`  `botstats`   `userinfo`  ")
     .addField("Fun", "`get`  `ascii`  `gif`  `random` `status`  `luckymunber`  `magik` ")
     .addField("Roleplay", "`pat`  `kiss`  `love`")
-    .addField("Contact", `FACEBOOK : [🔗 LINKS](https://www.facebook.com/heaalong855)\nDISCORD : [🔗 LINKS](https://discord.gg/ZWWD7zT)`)
+    .addField("Contact", `FACEBOOK : [🔗 LINKS](https://www.facebook.com/heaalong855)\nDISCORD :  [🔗 LINKS](https://discord.gg/ZWWD7zT)`)
        
-    const pollTitle = message.channel.send(embedsay);
-          pollTitle.react(`690770737828593665`);
-    const filter = (reaction) => reaction.emoji.name === '690770737828593665';
-   // message.react("📎");
+   message.channel.send(embedsay);
+   message.react("📎");
     //message.delete(100000);
  
  
