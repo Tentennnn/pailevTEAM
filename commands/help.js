@@ -22,7 +22,7 @@ const commandName = args.shift().toLowerCase();
     .addField("Roleplay", "`pat`  `kiss`  `love`")
     .addField("Contact", `FACEBOOK : [🔗 LINKS](https://www.facebook.com/heaalong855)\nDISCORD : [🔗 LINKS](https://discord.gg/ZWWD7zT)`)
        
-    const pollTitle = await message.channel.send(embedsay);
+    const pollTitle = message.channel.send(embedsay);
       await pollTitle.react(`690770737828593665`);
     const filter = (reaction) => reaction.emoji.name === '690770737828593665';
    // message.react("📎");
