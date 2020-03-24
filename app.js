@@ -51,7 +51,7 @@ client.on("guildMemberAdd", async member => {
 });
  
 client.on("guildMemberAdd", async member => {
-    let memberjoin = member.guild.channels.find('name', "new-player");
+    let memberjoin = member.guild.channels.find('name', "welcome");
 const embed = new Discord.RichEmbed()
 .setThumbnail(member.user.avatarURL)
 .setColor('#1f49a1')
