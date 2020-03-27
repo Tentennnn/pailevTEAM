@@ -45,7 +45,7 @@ function setActivity() {
 setInterval(setActivity, 1000 * 60 * 2)
 
  
-const applyText = (canvas, text) => {
+onst applyText = (canvas, text) => {
 	const ctx = canvas.getContext('2d');
 
 	// Declare a base size of the font
@@ -61,7 +61,6 @@ const applyText = (canvas, text) => {
 	return ctx.font;
 };
 
-  
 client.on('guildMemberAdd', async member => {
 	const channel = member.guild.channels.cache.find(ch => ch.name === 'member-log');
 	if (!channel) return;
@@ -75,8 +74,17 @@ client.on('guildMemberAdd', async member => {
 	ctx.strokeStyle = '#74037b';
 	ctx.strokeRect(0, 0, canvas.width, canvas.height);
 
-	const avatar = await Canvas.loadImage(member.user.displayAvatarURL({ format: 'png' }));
-	// Move the image downwards vertically and constrain its height to 200, so it's a square
+	// Assign the decided font to the canvas
+	ctx.font = applyText(canvas, member.displayName);
+	ctx.fillStyle = '#ffffff';
+	ctx.fillText(member.displayName, canvas.width / 2.5, canvas.height / 1.8);
+
+	ctx.beginPath();
+	ctx.arc(125, 125, 100, 0, Math.PI * 2, true);
+	ctx.closePath();
+	ctx.clip();
+
+	const avatar = await Canvas.loadImage(member.user.displayAvatarURL({ format: 'jpg' }));
 	ctx.drawImage(avatar, 25, 25, 200, 200);
 
 	const attachment = new Discord.MessageAttachment(canvas.toBuffer(), 'welcome-image.png');
