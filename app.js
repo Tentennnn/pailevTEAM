@@ -45,7 +45,7 @@ function setActivity() {
 setInterval(setActivity, 1000 * 60 * 2)
 
  
-onst applyText = (canvas, text) => {
+const applyText = (canvas, text) => {
 	const ctx = canvas.getContext('2d');
 
 	// Declare a base size of the font
