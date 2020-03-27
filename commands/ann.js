@@ -4,7 +4,7 @@ module.exports.run = async (client, message, Discord, prefix) => {
   const args = message.content.slice(prefix.length).split(/ +/);
 
 
-message.channel.send("@everyone").then(msg => {msg.delete(3000);
+message.channel.send("@everyone").then(msg => {msg.delete(3000)};
 let message = args.join(" ");
 const embed = new Discord.RichEmbed()
 .setColor("#ccc")
