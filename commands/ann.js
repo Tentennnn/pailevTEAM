@@ -11,3 +11,5 @@ const embed = new Discord.RichEmbed()
 .setTitle("📢Annoucements")
 .setDescription(message)
 message.channel.send(embed)
+
+   }
