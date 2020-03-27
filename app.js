@@ -15,7 +15,7 @@ const superagent = require("superagent");
 const meme = require('memejs');
 const gifSearch = require("gif-search"); 
 const db = require('quick.db');
-const Canvas = require('Canvas');
+//const Canvas = require('Canvas');
 
 let prefix = "#";
 
