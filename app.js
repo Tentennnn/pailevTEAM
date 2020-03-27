@@ -69,8 +69,6 @@ const applyText2 = (canvas, text) => {
     
 };
 
-	
-client.on("guildMemberAdd", async (member, client, message, args, level) => {  
   
 client.on('guildMemberAdd', async member => {
 	const channel = member.guild.channels.cache.find(ch => ch.name === 'welcome');
