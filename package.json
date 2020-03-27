@@ -39,7 +39,8 @@
     "cheerio": "^0.22.0",
     "unfluff": "^3.0.1",
     "quick.db": "^7.0.0-b22",
-    "fast-html-parser": "^1.0.1"
+    "fast-html-parser": "^1.0.1",
+    "canvas": "^2.6.1"
   },
   "engines": {
     "node": "8.x"
