@@ -15,6 +15,7 @@ const superagent = require("superagent");
 const meme = require('memejs');
 const gifSearch = require("gif-search"); 
 const db = require('quick.db');
+const Canvas = require('Canvas');
 
 let prefix = "#";
 
@@ -44,34 +45,25 @@ function setActivity() {
 setInterval(setActivity, 1000 * 60 * 2)
 
  
-const Canvass = require('canvas');
-//const snekfetch = require('snekfetch');
-
 const applyText = (canvas, text) => {
 	const ctx = canvas.getContext('2d');
+
+	// Declare a base size of the font
 	let fontSize = 70;
 
 	do {
-		ctx.font = `bold ${fontSize -= 10}px sans-serif`;
+		// Assign the font to the context and decrement it so it can be measured again
+		ctx.font = `${fontSize -= 10}px sans-serif`;
+		// Compare pixel width of the text to the canvas minus the approximate avatar size
 	} while (ctx.measureText(text).width > canvas.width - 300);
 
+	// Return the result to use in the actual canvas
 	return ctx.font;
-};
-const applyText2 = (canvas, text) => {
-	const ctx = canvas.getContext('2d');
-	let fontSize = 70;
-
-	do {
-		ctx.font = `bold ${fontSize -= 10}px sans-serif`;
-	} while (ctx.measureText(text).width > canvas.width - 300);
-
-    return ctx.font;
-    
 };
 
   
 client.on('guildMemberAdd', async member => {
-	const channel = member.guild.channels.cache.find(ch => ch.name === 'welcome');
+	const channel = member.guild.channels.cache.find(ch => ch.name === 'member-log');
 	if (!channel) return;
 
 	const canvas = Canvas.createCanvas(700, 250);
