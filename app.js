@@ -44,7 +44,7 @@ function setActivity() {
 
 setInterval(setActivity, 1000 * 60 * 2)
 
- 
+ const canvas = require('Canvas');
 const applyText = (canvas, text) => {
 	const ctx = canvas.getContext('2d');
 
