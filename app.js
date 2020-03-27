@@ -43,12 +43,6 @@ function setActivity() {
 
 setInterval(setActivity, 1000 * 60 * 2)
 
-
-client.on("guildMemberAdd", async member => {
-    var images = ["https://cdn.discordapp.com/attachments/442655163254308864/458569892233478145/20180619_165111.png", "https://cdn.discordapp.com/attachments/442655163254308864/458569893638438912/20180619_165132.png", "https://cdn.discordapp.com/attachments/442655163254308864/458569894158401537/20180619_165038.png", "https://cdn.discordapp.com/attachments/442655163254308864/458570061461061632/20180619_165333.png", "https://cdn.discordapp.com/attachments/442655163254308864/458570199688413204/20180619_165405.png",];
-    var rand = Math.floor(Math.random() * images.length);
-    var randomImage = images[rand];
-});
  
 client.on("guildMemberAdd", async member => {
 const Canvass = require('canvas');
