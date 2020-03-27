@@ -83,7 +83,7 @@ client.on('guildMemberAdd', async member => {
 	ctx.strokeStyle = '#74037b';
 	ctx.strokeRect(0, 0, canvas.width, canvas.height);
 
-	const avatar = await Canvas.loadImage(member.user.displayAvatarURL({ format: 'jpg' }));
+	const avatar = await Canvas.loadImage(member.user.displayAvatarURL({ format: 'png' }));
 	// Move the image downwards vertically and constrain its height to 200, so it's a square
 	ctx.drawImage(avatar, 25, 25, 200, 200);
 
