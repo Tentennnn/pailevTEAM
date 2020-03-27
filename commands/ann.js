@@ -5,11 +5,11 @@ module.exports.run = async (client, message, Discord, prefix) => {
 
 
 message.channel.send("@everyone").then(msg => {msg.delete(3000)});
-let message = args.join(" ");
+let txt = args.join(" ");
 const embed = new Discord.RichEmbed()
 .setColor("#ccc")
 .setTitle("📢Annoucements")
-.setDescription(message)
+.setDescription(txt)
 message.channel.send(embed)
 
    }
