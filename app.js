@@ -44,7 +44,6 @@ function setActivity() {
 setInterval(setActivity, 1000 * 60 * 2)
 
  
-client.on("guildMemberAdd", async member => {
 const Canvass = require('canvas');
 //const snekfetch = require('snekfetch');
 
