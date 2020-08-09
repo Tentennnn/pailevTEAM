@@ -17,7 +17,7 @@ const gifSearch = require("gif-search");
 const db = require('quick.db');
 //const Canvas = require('Canvas');
 
-let prefix = "#";
+let prefix = process.env.PREFIX;
 
 
 client.on('ready', () => {
